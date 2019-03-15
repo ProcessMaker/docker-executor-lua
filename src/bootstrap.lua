@@ -1,3 +1,5 @@
+require "luarocks.loader"
+
 -- Create our global variables
 data = nil
 config = nil
