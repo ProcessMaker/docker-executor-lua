@@ -1,4 +1,3 @@
--- local inspect = require("inspect")
 local users_api_class = require("pmsdk.api.users_api")
 
 local host = os.getenv("API_HOST")
@@ -14,4 +13,4 @@ per_page='10'
 include=''
 local users, ret2, ret3 = users_api_instance:get_users(filter, order_by, order_direction, per_page, include)
 
-return {users=users.data}
+return {users=users, ret2=ret2, ret3=ret3}
