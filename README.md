@@ -52,6 +52,30 @@ return data
 {"message":"dlroW olleH"}
 ```
 
+## Using the PM4 SKD
+
+The executor comes pre-configured with the ProcessMaker 4 SDK ready to use.
+
+Get an instance by calling `client.make('name')`.
+
+Here is an example of fetching all pm4 users:
+
+```lua
+users_api = client.make('users_api')
+
+filter=''
+order_by='id'
+order_direction='asc'
+per_page='10'
+include=''
+local users, ret2, ret3 = users_api:get_users(filter, order_by, order_direction, per_page, include)
+
+return {users=users}
+```
+
+See ProcessMaker API documentation for more info at /api/documentation
+on your ProcessMaker 4 instance
+
 ## Command Line Usage
 ```bash
 $ docker run -v <path to local data.json>:/opt/executor/data.json \
