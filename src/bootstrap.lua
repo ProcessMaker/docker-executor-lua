@@ -30,6 +30,9 @@ end
 -- Reimport our dkjson, but this can now be in local scope
 local json = require "dkjson"
 
+-- Add a client wrapper to get the pre-configured api and model instances from the sdk
+client = require("client")
+
 -- Do our script and get the response
 response = dofile("/opt/executor/script.lua")
 

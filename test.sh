@@ -14,7 +14,7 @@ docker run --rm \
 -v $EXECUTOR_DIR/output.json:/opt/executor/output.json \
 -e "API_TOKEN=$API_TOKEN" \
 -e "API_HOST=$API_HOST" \
-$EXECUTOR_IMAGE lua5.3 /opt/executor/bootstrap.lua
+$EXECUTOR_IMAGE lua5.3 bootstrap.lua
 
 cat $EXECUTOR_DIR/output.json
 echo '' > $EXECUTOR_DIR/output.json
