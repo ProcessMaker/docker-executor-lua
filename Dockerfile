@@ -9,7 +9,7 @@ RUN apt-get install -y lua5.3 luarocks liblua5.3-dev build-essential libssl-dev 
 COPY ./src /opt/executor
 
 # Build the sdk and save it in luarocks default folder
-WORKDIR /opt/executor/pm4-sdk-lua
+WORKDIR /opt/executor/sdk-lua
 RUN luarocks make --local
 
 # Set working directory to our /opt/executor location

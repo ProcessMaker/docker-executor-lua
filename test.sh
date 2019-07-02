@@ -1,10 +1,10 @@
 set -e
 set -x
 
-API_TOKEN=bearer-token-here
-API_HOST=http://bpm4.local.processmaker.com/api/1.0
+API_TOKEN=token
+API_HOST=http://pm.local.processmaker.com/api/1.0
 
-EXECUTOR_IMAGE="processmaker/pm4-docker-executor-lua:dev-master"
+EXECUTOR_IMAGE="processmaker4/executor-lua:dev-master"
 EXECUTOR_DIR=${PWD}/tests/sdk
 
 docker run --rm \
