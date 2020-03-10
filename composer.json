@@ -1,0 +1,20 @@
+{
+    "name": "processmaker/docker-executor-lua",
+    "friendly_name": "Lua Docker Executor",
+    "description": "Lua script executor for processmaker 4",
+    "version": "1.0.0",
+    "minimum-stability": "dev",
+    "autoload": {
+        "psr-4": {
+            "ProcessMaker\\Package\\DockerExecutorLua\\": "src",
+            "ProcessMaker\\ScriptRunners\\": "src/ScriptRunners"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "ProcessMaker\\Package\\DockerExecutorLua\\DockerExecutorLuaServiceProvider"
+            ]
+        }
+    }
+}

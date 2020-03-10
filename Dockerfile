@@ -8,17 +8,6 @@ RUN apt-get install -y lua5.3 luarocks liblua5.3-dev build-essential libssl-dev 
 # Copy over our LUA libraries/runtime
 COPY ./src /opt/executor
 
-# Get the sdk repo if it doesn't exist
+# Add dkjson package
 WORKDIR /opt/executor
-RUN if [ ! -d "sdk-lua" ]; then git clone --depth 1 https://github.com/ProcessMaker/sdk-lua.git; fi
-
-# Build the sdk and save it in luarocks default folder
-WORKDIR /opt/executor/sdk-lua
-RUN luarocks make --local
-
-# Set working directory to our /opt/executor location
-WORKDIR /opt/executor
-
-LABEL maintainer="taylor@processmaker.com"
-
 RUN luarocks install dkjson
