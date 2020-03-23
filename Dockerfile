@@ -1,4 +1,3 @@
-# Bring in from base debian docker image
 FROM debian:9.5
 
 # Update packages, then install lua
