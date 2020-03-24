@@ -44,7 +44,8 @@ class DockerExecutorLuaServiceProvider extends ServiceProvider
                 'RUN luarocks make --local',
                 'WORKDIR /opt/executor',
             ],
-            'package_path' => __DIR__ . '/..'
+            'package_path' => __DIR__ . '/..',
+            'package_version' => self::version,
         ];
         config(['script-runners.lua' => $config]);
 
