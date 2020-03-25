@@ -29,7 +29,7 @@ class DockerExecutorLuaServiceProvider extends ServiceProvider
             \Artisan::call('processmaker:build-script-executor lua');
             
             // Restart the workers so they know about the new supported language
-            \Artisan::call('horizon:terminate');
+            try { \Artisan::call('horizon:terminate'); } catch(\Throwable $e) { }
         });
 
         $config = [
