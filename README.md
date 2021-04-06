@@ -52,7 +52,7 @@ return data
 {"message":"dlroW olleH"}
 ```
 
-## Using the PM4 SKD
+## Using the PM4 SDK
 
 The executor comes pre-configured with the ProcessMaker 4 SDK ready to use.
 
@@ -90,6 +90,6 @@ $ docker run -v <path to local data.json>:/opt/executor/data.json \
 
 Distributed under the [AGPL Version 3](https://www.gnu.org/licenses/agpl-3.0.en.html)
 
-ProcessMaker \(C\) 2002 - 2020 ProcessMaker Inc.
+ProcessMaker \(C\) 2002 - 2021 ProcessMaker Inc.
 
 For further information visit: [http://www.processmaker.com/](http://www.processmaker.com/)
