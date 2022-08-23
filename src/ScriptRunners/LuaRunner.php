@@ -17,6 +17,7 @@ class LuaRunner extends Base
         $dockerConfig['image'] = config('script-runners.lua.image');
         $dockerConfig['command'] = 'lua5.3 /opt/executor/bootstrap.lua';
         $dockerConfig['inputs']['/opt/executor/script.lua'] = $code;
+
         return $dockerConfig;
     }
 }
