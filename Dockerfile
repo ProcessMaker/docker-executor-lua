@@ -1,4 +1,4 @@
-FROM debian:9.5
+FROM debian:11.7
 
 # Update packages, then install lua
 RUN apt-get update -qq
