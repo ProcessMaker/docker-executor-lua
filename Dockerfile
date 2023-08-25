@@ -1,4 +1,4 @@
-FROM debian:9.5
+FROM debian:11.7
 
 RUN echo "deb http://archive.debian.org/debian stretch main" > /etc/apt/sources.list
 
